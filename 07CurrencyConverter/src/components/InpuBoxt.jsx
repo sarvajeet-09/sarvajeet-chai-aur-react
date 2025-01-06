@@ -9,7 +9,6 @@ currencuOptions = [],
 selectCurrency = "usd",
 amountDisable = false,
 currencyDisable = false,
-  
   className = "",
 }) {
  
@@ -39,7 +38,10 @@ currencyDisable = false,
                   disabled ={currencyDisable}
               >
                   
-                    {currencuOptions.map}
+                    {currencuOptions.map((Currency)=>(  
+                      <option key={Currency} value={Currency}>
+                          usd
+                      </option>))}
               
               </select>
           </div>
