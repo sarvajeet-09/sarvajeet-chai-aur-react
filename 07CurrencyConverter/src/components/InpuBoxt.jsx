@@ -34,19 +34,21 @@ currencyDisable = false,
               <select
                   className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
                   value={selectCurrency}
+                  key={selectCurrency}
                   onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
                   disabled ={currencyDisable}
               >
-                  
-                    {currencuOptions.map((Currency)=>(  
-                      <option key={Currency} value={Currency}>
-                          usd
-                      </option>))}
+                    {currencuOptions.map((currency)=>(  
+                      <option key={currency} value={currency}>
+                          {currency}
+                      </option>
+                    )
+                    )}
               
               </select>
           </div>
       </div>
-  );
+  ); 
 }
 
 export default InputBox;
