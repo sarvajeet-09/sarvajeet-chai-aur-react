@@ -3,10 +3,11 @@ import "./App.css"
 // import SearchIcon from '@mui/icons-material/Search';
 import Header from './Components/Header'
 import Sidebar from './Components/Sidebar'
+import Feed from './Components/Feed'
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       {/* header */}
       <Header />
       {/* app body */}
@@ -14,6 +15,9 @@ function App() {
         {/* sidebar */}
         <Sidebar/>
         {/* feed */}
+        <Feed/>
+
+
         {/* widgets */}
       </div>
 
