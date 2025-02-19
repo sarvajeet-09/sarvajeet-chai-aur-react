@@ -3,6 +3,7 @@ import Header from './Header'
 import Banner from './Banner'
 import '../components/Home.css'
 import Aboutsection from './AboutSection'
+import OurProducts from './OurProducts'
 
 function Home() {
   return (
@@ -10,6 +11,7 @@ function Home() {
   <Header></Header>
   <Banner></Banner>
   <Aboutsection></Aboutsection>
+  <OurProducts/>
   </>
   )
 }
