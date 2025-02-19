@@ -1,0 +1,28 @@
+/* .topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background-color: #000;
+} */
+
+.topbar a{
+    color: #fff;
+    font-size: 16px;
+}
+nav .my-nav-logo{
+    height: 100px;
+}
+nav a{
+    color: #000 !important;
+    transition: 0.5s ease;
+}
+nav .getQuote{
+    color: #fff !important;
+}
+nav .getQuote:hover{ 
+color: #fff !important;
+}
+nav a:hover{
+    color: #0d50f9 !important;
+}
