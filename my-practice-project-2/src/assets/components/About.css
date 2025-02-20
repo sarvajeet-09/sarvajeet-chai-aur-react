@@ -1,0 +1,113 @@
+/* About -us atart */
+
+.new-about-us{
+    background-image: url(https://webmartsolutions.com/demo/Hatsumei-packaging/assets/images/banner/img-back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover  ;
+  }
+  .new-about-us .img-twice::before {
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    background: var(--primary);
+    border: 25px solid var(--light);
+    z-index: -1;
+  }
+  .new-about-us .img-twice .abt-img{
+    border-right:10px solid var(--blue) ;
+    border-bottom:10px solid var(--blue) ;
+  }
+  .new-about-us .img-twice .abt-img1{
+    border-top:10px solid var(--blue) ;
+    border-left:10px solid var(--blue) ;
+  }
+
+  
+  .heading {
+    text-align: center;
+  }
+  .heading h3 {
+    font-size: 35px;
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: var(--blue);
+  }
+  .line {
+    height: 5px;
+    width: 60px;
+    background-color: rgba(107, 105, 105, 0.067);
+    display: inline-block;
+  }
+  
+  
+  .new-about-us .new-about-img{
+    position: relative;
+  }
+  .new-about-us .new-about-img .overlay{
+    position:absolute;
+    width: 100%;
+    top: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.555);
+  }
+  @media(max-width:1200px){
+    .new-about-us .new-about-img .overlay{
+      top: 20%;
+    }
+  }
+  
+  .new-about-us .text p {
+    text-align: justify;
+  }
+  .new-about-us .text h5{
+    color: var(--blue);
+    margin-bottom: 0px;
+  }
+  @media (max-width: 500px) {
+    .new-about-us .text p {
+      font-size: 14px;
+      text-align: justify;
+      margin: 25px 0px;
+    }
+  }
+  
+  .new-about-us .overlay .overlay-content {
+    padding: 25px 30px;
+  }
+  .new-about-us .overlay .overlay-content .about-quality {
+    border-bottom: 1px solid #fff;
+    text-align: center;
+  }
+  .new-about-us .overlay .overlay-content .about-quality h4 {
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  .new-about-us .quality .assurance h3{
+    font-size: 30px;
+    color: var(--blue);
+    }
+    .new-about-us .quality .assurance{
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 10px 0px;
+    }
+    .new-about-us .quality .assurance p{
+      margin-bottom: 0px;
+    }
+  /* about-us-readmore-btn start*/
+  
+  .new-about-us .readmore-btn a {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--blue);
+    padding: 10px 20px;
+  }
+  /* about-us-readmore-btn-end */
+  
+  

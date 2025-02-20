@@ -1,0 +1,191 @@
+
+
+
+.topbar {
+    padding: 10px 0px;
+    background-color: var(--blue);
+    position: relative;
+    z-index: 999999;
+  }
+  .topbar .top-bar-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .topbar .top-bar-content .text-content {
+    font-size: 15px;
+    color: #fff;
+  }
+  .topbar .top-bar-content .text-content p {
+    margin-bottom: 0px;
+    margin: 0px 10px;
+  }
+  .topbar .top-bar-content .content a {
+    text-decoration: none;
+    margin-bottom: 0px;
+    color: #fff;
+    margin: 0px 10px;
+    font-size: 15px;
+  }
+  .topbar .top-bar-content .content a i {
+    color: #fff;
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .topbar {
+      display: none;
+    }
+  }
+  /* nav bar start  */
+.navbar {
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    z-index: 99999;
+   background-color: #fff;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .navbar-brand{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .navbar .navbar-brand img {
+    height: 110px;
+    width: 110px;
+  }
+  @media (max-width: 768px) {
+    .navbar .navbar-brand img {
+      height: 90px;
+      width: 90px;
+    }
+  }
+  /* .navbar .navbar-nav .nav-item .active {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 14px;
+    color: var(--red)!important;
+    border-bottom: 2px solid var(--red);
+    transition: 0.5s ease;
+    transform-origin: left;
+  } */
+  
+  .navbar .navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px 14px;
+    color: #000 !important;
+    border-bottom: 2px solid #fff;
+    transition: 0.5s ease;
+    transform-origin: left;
+  }
+  .navbar .navbar-nav .nav-link:hover{
+    border-bottom: 2px solid var(--red);
+    color: var(--red) !important;
+     
+  }
+  .navbar .navbar-nav .dropdown .dropdown-menu{
+    transition: 0.6s ease;
+  }
+  .navbar .navbar-nav .dropdown:hover .dropdown-menu{
+    display: block;
+  }
+  
+  .navbar .contact-us-nav >a{
+     text-decoration: none;
+     color: #fff;
+     background-color: var(--blue);
+     padding: 10px 20px;
+     border-radius: 20px;
+  }
+  .navbar .contact-us-nav >NavLink >i{
+      color: var(--red);
+  }
+  .banner-nav {
+    position: relative;
+  }
+  .navbar .contact-us-nav .social .facebook{
+    text-decoration: none;
+    color: #005ff8;
+    font-size: 25px;
+  }
+  .navbar .contact-us-nav .social .linkedin{
+    text-decoration: none;
+    color: #3691D9;
+    font-size: 25px;
+  }
+  .navbar .contact-us-nav .social .twitter{
+    text-decoration: none;
+    color: #16a2ff;
+    font-size: 25px;
+  }
+  
+  .navbar .contact-us-nav .social .whatsapp{
+    text-decoration: none;
+    color: #25D366;
+    font-size: 25px;
+  }
+  
+/* fixed-icon start */
+.fixed-icons{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    z-index: 99999;
+  }
+  .fixed-icons .whatsapp-fixed{
+    margin:0px 10px ;
+  }
+  .fixed-icons .whatsapp-fixed a{
+  text-decoration: none;
+  font-size: 22px;
+  background-color:#25D366;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 2px;
+  }
+  .fixed-icons .phone-icon {
+    margin:0px 10px ;
+  }
+  .fixed-icons .phone-icon a{
+  text-decoration: none;
+  font-size: 22px;
+  background-color:var(--blue);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 2px;
+  }
+  
+  @media(max-width:500px){
+    .fixed-icons{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      bottom: 0px;
+      z-index: 99999;
+    }
+    .fixed-icons .whatsapp-fixed{
+      margin:0px 5px ;
+    }
+    .fixed-icons .whatsapp-fixed a{
+    text-decoration: none;
+    font-size: 16px;
+    background-color:#25D366;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 2px;
+    }
+    .fixed-icons .phone-icon {
+      margin:0px 5px ;
+    }
+    .fixed-icons .phone-icon a{
+    text-decoration: none;
+    font-size: 16px;
+    background-color:var(--blue);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 2px;
+    }
+  }
+  /* fixed icon end */  
