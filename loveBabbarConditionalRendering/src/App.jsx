@@ -9,6 +9,11 @@ function App() {
     setLoggedIn(LoggedIn);
 };
 
+  // if (!isLoggedIn) {
+  //   return (
+  //     <LoginBtn isLoggedIn={isLoggedIn} setLoggedIn = {setLoggedIn} />
+  //   )
+  // }
   // return (
   //   <div>
   //     <h1>welCome to the Lecture of Conditional rendering in react js</h1>
