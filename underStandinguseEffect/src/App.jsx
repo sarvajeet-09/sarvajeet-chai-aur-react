@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Fake products={product}/>  
+      <Fake product={product}/>  
       <button onClick={increProduct}>
         Next Product
       </button>
