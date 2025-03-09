@@ -10,20 +10,20 @@ function Fake({ product }) {
         const response = await fetch(`https://fakestoreapi.com/products/${product}`);
         const result = await response.json();
         console.log(result);
-        console.log(product)
+        console.log(product);
         setmyProduct(result)
       } catch (err) {
         alert();
       }
     };
-
     fetchData();
   }, [product]);
 
 
   return (
     <>
- {myProduct && <h1>{myProduct.title}</h1>}
+ {/* {myProduct && <h1>{myProduct.title}</h1>} */}
+      <h1>{myProduct?.title}</h1>
     </>
   )
 }
