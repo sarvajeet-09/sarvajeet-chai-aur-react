@@ -8,12 +8,18 @@ function App() {
   const increProduct = () =>{
     setProduct(product+1)
   }
+  const decreProduct = () =>{
+    setProduct(product-1)
+  }
 
   return (
     <>
       <Fake product={product}/>  
       <button onClick={increProduct}>
         Next Product
+      </button>
+      <button onClick={decreProduct}>
+        Prev Product
       </button>
     </>
   )
