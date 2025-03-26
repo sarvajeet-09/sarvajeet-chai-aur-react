@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { items } from './Data'
 import './ProductDetail.css'
 import './Product.css'
+import Product from './Product'
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -10,12 +11,7 @@ const ProductDetail = () => {
   const [related, setRelated] = useState([])
 
 // for scrolling the window after click
-   function scrollClick(){
-    window.scroll({
-      top:0,
-      behavior:"smooth"
-    })
-   }
+ 
 
 
   useEffect(() => {
@@ -37,12 +33,12 @@ const ProductDetail = () => {
       <div className="container">
         <div className="product-detail-div">
           <div className="row">
-            <div className="col-lg-5">
+            <div className="col-lg-5 mb-5">
               <div className="img">
                 <img src={product.imgSrc} className="img-fluid" alt="" />
               </div>
             </div>
-            <div className="col-lg-7">
+            <div className="col-lg-7 mb-5">
               <div className="details">
                 <h3>{product.title}</h3>
                 <p>{product.description}</p>
@@ -58,7 +54,11 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
+          <div className="col-lg-12">
+            <h1 className="text-light">Related Product</h1>
           </div>
+          </div>
+
         </div>
       </div>
 
@@ -66,7 +66,7 @@ const ProductDetail = () => {
 
       {/* related product start */}
 
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
           {
             related.map((product) => {
@@ -88,11 +88,11 @@ const ProductDetail = () => {
             })
           }
         </div>
-      </div>
+      </div> */}
       {/* related product end */}
 
-
-
+   
+   <Product items={related}/>
     </>
   )
 }

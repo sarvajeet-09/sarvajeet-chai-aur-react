@@ -1,8 +1,18 @@
 import React from 'react'
 import "./Product.css"
-import { items } from './Data'
 import { Link } from 'react-router-dom'
-const Product = () => {
+
+
+const Product = ({items}) => {
+
+// scrolling top onclicking the icon
+  function scrollClick(){
+    window.scroll({
+      top:0,
+      behavior:"smooth"
+    })
+   }
+
     return (
         <>
             <div className="product-card py-5">
@@ -12,7 +22,7 @@ const Product = () => {
                             items.map((product) => {
                                 return (
                                     <div className="col-lg-4 mb-4">
-                                        <Link to={`/product/${product.id}`} key={product.id} className="main-card">
+                                        <Link to={`/product/${product.id}`} key={product.id} onClick={scrollClick} className="main-card">
                                             <div className="pro-card">
                                                 <h3>{product.title}</h3>
                                                 <img src={product.imgSrc} className='img-fluid img' alt="" />
