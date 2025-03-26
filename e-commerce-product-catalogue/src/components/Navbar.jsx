@@ -1,20 +1,21 @@
 import React from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 function Navbar() {
     return (
         <>
             <header className='sticky-top shadow-2'>
                 <div className="nav-bar shadow-1">
                     <div className="brand">
-                    <h1> E-cart</h1>
+                    <Link to={'/'} className='brand-name'> E-cart</Link>
                     </div>
                     <div className="search">
                      <input type="text" name="" placeholder='search' id="" />
                      <span><i className='fa fa-magnifying-glass'></i></span>
                     </div>
-                    <div className="cart">
+                    <Link to={'/cart'} className="cart">
                     <button className='btn'><i className='fa fa-cart-shopping'></i></button>
-                    </div>
+                    </Link>
                 </div>
             </header>
 <hr />

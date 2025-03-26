@@ -6,7 +6,8 @@
    
   }
 
-  .nav-bar .brand h1{
+  .nav-bar .brand .brand-name{
+    text-decoration: none;
     font-size: 25px;
     color: #fff;
     margin-bottom: 0px !important;
