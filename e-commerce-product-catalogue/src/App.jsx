@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-    <Router>
-    <Navbar/>
+    <Router  >
+    <Navbar setData = {setData}   />
     <Routes>
     <Route path="/" element={<Product items = {data}/>} ></Route>
     <Route path = "/product/:id" element={<ProductDetail/>} ></Route>
