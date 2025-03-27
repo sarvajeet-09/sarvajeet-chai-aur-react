@@ -12,18 +12,18 @@ function App() {
 
   return (
     <>
-    <Router  >
-    <Navbar setData = {setData}   />
-    <Routes>
-    <Route path="/" element={<Product items = {data}/>} ></Route>
-    <Route path = "/product/:id" element={<ProductDetail/>} ></Route>
-    <Route path = "/search/:term" element={<SearchItem/>} ></Route>
-    <Route path = "/cart/" element={<Cart/>} ></Route>
-    </Routes>
-    {/* <Product/> */}
-    </Router>
- 
-   
+      <Router  >
+        <Navbar setData={setData} />
+        <Routes>
+          <Route path="/" element={<Product items={data} />} ></Route>
+          <Route path="/product/:id" element={<ProductDetail />} ></Route>
+          <Route path="/search/:term" element={<SearchItem />} ></Route>
+          <Route path="/cart/" element={<Cart />} ></Route>
+        </Routes>
+        {/* <Product/> */}
+      </Router>
+
+
 
 
 
