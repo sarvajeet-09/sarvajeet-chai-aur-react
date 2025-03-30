@@ -2,29 +2,62 @@ import React from 'react'
 import "./Product.css"
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/ReactToastify.css'
 
-const Product = ({items, cart, setCart}) => {
-
-
-const addToCart = (id,price,title,description,imgSrc) => {
-   const Obj = {
-    id,price,title,description,imgSrc
-   }
-   console.log(cart)
-   setCart([...cart, Obj])
-}
+const Product = ({ items, cart, setCart }) => {
 
 
-// scrolling top onclicking the icon
-  function scrollClick(){
-    window.scroll({
-      top:0,
-      behavior:"smooth"
-    })
-   }
+    const addToCart = (id, price, title, description, imgSrc) => {
+        const Obj = {
+            id, price, title, description, imgSrc
+        }
+        setCart([...cart, Obj])
+        console.log(cart)
+
+
+        toast.success(`item added to cart SucessFully`, {
+            position: "top-right",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            
+            });
+    }
+
+
+    // scrolling top onclicking the icon
+    function scrollClick() {
+        window.scroll({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
 
     return (
         <>
+
+            {/* toastify start */}
+            <ToastContainer
+                position="top-right"
+                autoClose={1500}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick={false}
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+              
+            />
+            {/* toastufy end */}
+
+
+
             <div className="product-card py-5">
                 <div className="container">
                     <div className="row">
@@ -32,10 +65,10 @@ const addToCart = (id,price,title,description,imgSrc) => {
                             items.map((product) => {
                                 return (
                                     <div className="col-lg-4 mb-4">
-                                        <div  className="main-card">
+                                        <div className="main-card">
                                             <div className="pro-card">
                                                 <h3>{product.title}</h3>
-                                              <Link to={`/product/${product.id}`} key={product.id} onClick={scrollClick}>  <img src={product.imgSrc} className='img-fluid img' alt="" /></Link>
+                                                <Link to={`/product/${product.id}`} key={product.id} onClick={scrollClick}>  <img src={product.imgSrc} className='img-fluid img' alt="" /></Link>
                                                 <p>{product.description}</p>
                                             </div>
                                             <div className="price-about">
@@ -43,13 +76,13 @@ const addToCart = (id,price,title,description,imgSrc) => {
 
 
 
-                                                <button 
-                                                onClick={() => addToCart(product.id, product.title, product.description, product.imgSrc)}
-                                                type='button'
-                                                 className='btn '
-                                                 
-                                                 
-                                                 >Add to Cart <i className='fa fa-cart-shopping'></i></button>
+                                                <button
+                                                    onClick={() => addToCart(product.id, product.title, product.description, product.imgSrc)}
+                                                    type='button'
+                                                    className='btn '
+
+
+                                                >Add to Cart <i className='fa fa-cart-shopping'></i></button>
                                             </div>
                                         </div>
                                     </div>

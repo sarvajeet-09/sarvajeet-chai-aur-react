@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import { Link, useNavigate } from 'react-router-dom'
 import { items } from './Data'
-function Navbar({ setData }) {
+function Navbar({ setData , cart}) {
 
     const [searchItem, setSearch] = useState("");
     const navigate = useNavigate()
@@ -22,7 +22,6 @@ function Navbar({ setData }) {
         e.preventDefault()
         navigate(`/search/${searchItem}`)
         setSearch("")
-
     }
 
     return (
@@ -40,7 +39,14 @@ function Navbar({ setData }) {
                         <span onClick={handleClick}><i className='fa fa-magnifying-glass'></i></span>
                     </form>
                     <Link to={'/cart'} className="cart">
-                        <button className='btn'><i className='fa fa-cart-shopping'></i></button>
+                        <button type="button" className="btn position-relative">
+                            <i className='fa fa-cart-shopping'></i>
+                            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                               {cart.length}
+                                <span className="visually-hidden">unread messages</span>
+                            </span>
+                        </button>
+                        {/* <button className='btn'><i className='fa fa-cart-shopping'></i></button> */}
                     </Link>
                 </div>
             </header>
