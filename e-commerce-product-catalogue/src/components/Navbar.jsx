@@ -11,6 +11,7 @@ function Navbar({ setData , cart}) {
         const element = items.filter((item) => item.category === categor)
         console.log(element)
         setData(element)
+        navigate(`/`)
     }
 
     const filterByPrice = (price) => {

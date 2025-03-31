@@ -6,7 +6,7 @@ import 'react-toastify/ReactToastify.css'
 
 const Product = ({ items, cart, setCart }) => {
 
-
+ console.log(items)
     const addToCart = (id, price, title, description, imgSrc) => {
         const Obj = {
             id, price, title, description, imgSrc
@@ -77,7 +77,7 @@ const Product = ({ items, cart, setCart }) => {
 
 
                                                 <button
-                                                    onClick={() => addToCart(product.id, product.title, product.description, product.imgSrc)}
+                                                    onClick={() => addToCart(product.id,product.price, product.title, product.description, product.imgSrc)}
                                                     type='button'
                                                     className='btn '
 
