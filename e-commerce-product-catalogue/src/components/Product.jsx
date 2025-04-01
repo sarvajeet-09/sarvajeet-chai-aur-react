@@ -13,7 +13,8 @@ const Product = ({ items, cart, setCart }) => {
         }
 
 
-        const isItemInCart = cart.some((item) => item.id === 1);
+        const isItemInCart = cart.some((item) => item.id === Obj.id);
+        console.log(isItemInCart)
         if (isItemInCart) {
             toast.success(`item already exists in the cart`, {
                 position: "top-right",
@@ -24,8 +25,8 @@ const Product = ({ items, cart, setCart }) => {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-
             });
+
             return;
         }
 

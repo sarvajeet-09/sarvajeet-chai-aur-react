@@ -29,31 +29,7 @@ const ProductDetail = ({setCart, cart}) => {
 
 
 
-  const addToCart = () => {
-    if (!cart) {
-      console.error("Cart is undefined");
-      return;
-    }
 
-    // Check if item is already in the cart
-    const isItemInCart = cart.some((item) => item.id === product.id);
-    if (isItemInCart) {
-      toast.info("Item is already in the cart", {
-        position: "top-right",
-        autoClose: 1500,
-        theme: "dark",
-      });
-      return;
-    }
-
-    // Add item to cart
-    setCart([...cart, product]);
-    toast.success("Item added to cart successfully", {
-      position: "top-right",
-      autoClose: 1500,
-      theme: "dark",
-    });
-  };
 
 
 
