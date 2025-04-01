@@ -6,11 +6,30 @@ import 'react-toastify/ReactToastify.css'
 
 const Product = ({ items, cart, setCart }) => {
 
- console.log(items)
+    //  console.log(items)
     const addToCart = (id, price, title, description, imgSrc) => {
         const Obj = {
             id, price, title, description, imgSrc
         }
+
+
+        const isItemInCart = cart.some((item) => item.id === 1);
+        if (isItemInCart) {
+            toast.success(`item already exists in the cart`, {
+                position: "top-right",
+                autoClose: 1500,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+
+            });
+            return;
+        }
+
+
         setCart([...cart, Obj])
         console.log(cart)
 
@@ -24,8 +43,8 @@ const Product = ({ items, cart, setCart }) => {
             draggable: true,
             progress: undefined,
             theme: "dark",
-            
-            });
+
+        });
     }
 
 
@@ -52,7 +71,7 @@ const Product = ({ items, cart, setCart }) => {
                 draggable
                 pauseOnHover
                 theme="dark"
-              
+
             />
             {/* toastufy end */}
 
@@ -77,7 +96,7 @@ const Product = ({ items, cart, setCart }) => {
 
 
                                                 <button
-                                                    onClick={() => addToCart(product.id,product.price, product.title, product.description, product.imgSrc)}
+                                                    onClick={() => addToCart(product.id, product.price, product.title, product.description, product.imgSrc)}
                                                     type='button'
                                                     className='btn '
 

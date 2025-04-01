@@ -5,7 +5,7 @@ import './ProductDetail.css'
 import './Product.css'
 import Product from './Product'
 
-const ProductDetail = () => {
+const ProductDetail = ({setCart, cart}) => {
   const { id } = useParams();
   const [product, setProduct] = useState([])
   const [related, setRelated] = useState([])
@@ -26,6 +26,41 @@ const ProductDetail = () => {
     setRelated(relatedProducts)
 
   }, [id, product.category])
+
+
+
+  const addToCart = () => {
+    if (!cart) {
+      console.error("Cart is undefined");
+      return;
+    }
+
+    // Check if item is already in the cart
+    const isItemInCart = cart.some((item) => item.id === product.id);
+    if (isItemInCart) {
+      toast.info("Item is already in the cart", {
+        position: "top-right",
+        autoClose: 1500,
+        theme: "dark",
+      });
+      return;
+    }
+
+    // Add item to cart
+    setCart([...cart, product]);
+    toast.success("Item added to cart successfully", {
+      position: "top-right",
+      autoClose: 1500,
+      theme: "dark",
+    });
+  };
+
+
+
+
+
+
+
   return (
     <>
       {/* main product displaying start */}
@@ -92,7 +127,7 @@ const ProductDetail = () => {
       {/* related product end */}
 
    
-   <Product items={related}/>
+   <Product items={related} cart={cart} setCart={setCart} />
     </>
   )
 }
